@@ -27,7 +27,7 @@ class Project {
   Project({
     required this.name,
     required this.generate,
-    this.version = 20.4,
+    this.version = 21,
     this.target = './',
     this.packFormat,
     this.supportedFormats,
@@ -53,6 +53,8 @@ class Project {
 
   int getPackFormat() {
     if (packFormat != null) return packFormat!;
+    if (version >= 21) return 48;
+    if (version >= 20.5) return 41;
     if (version >= 20.3) return 26;
     if (version >= 20.2) return 18;
     if (version >= 20) return 15;
