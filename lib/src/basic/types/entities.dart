@@ -6,7 +6,7 @@ class Entities {
   import cog
   import requests
 
-  version = '1.20/snapshots/23w51b'
+  version = '1.21/releases/1.21.1'
 
   res = requests.get(f'https://raw.githubusercontent.com/PixiGeko/Minecraft-generated-data/master/{version}/custom-generated/registries/entity_type.txt')
   blocks = []
@@ -27,8 +27,7 @@ class Entities {
   /// [Area Effect Cloud](https://minecraft.wiki/w/area_effect_cloud)
   ///
   /// _(minecraft:area_effect_cloud)_
-  static const EntityType area_effect_cloud =
-      EntityType('minecraft:area_effect_cloud');
+  static const EntityType area_effect_cloud = EntityType('minecraft:area_effect_cloud');
 
   /// [Armadillo](https://minecraft.wiki/w/armadillo)
   ///
@@ -75,10 +74,20 @@ class Entities {
   /// _(minecraft:boat)_
   static const EntityType boat = EntityType('minecraft:boat');
 
+  /// [Bogged](https://minecraft.wiki/w/bogged)
+  ///
+  /// _(minecraft:bogged)_
+  static const EntityType bogged = EntityType('minecraft:bogged');
+
   /// [Breeze](https://minecraft.wiki/w/breeze)
   ///
   /// _(minecraft:breeze)_
   static const EntityType breeze = EntityType('minecraft:breeze');
+
+  /// [Breeze Wind Charge](https://minecraft.wiki/w/breeze_wind_charge)
+  ///
+  /// _(minecraft:breeze_wind_charge)_
+  static const EntityType breeze_wind_charge = EntityType('minecraft:breeze_wind_charge');
 
   /// [Camel](https://minecraft.wiki/w/camel)
   ///
@@ -103,8 +112,7 @@ class Entities {
   /// [Chest Minecart](https://minecraft.wiki/w/chest_minecart)
   ///
   /// _(minecraft:chest_minecart)_
-  static const EntityType chest_minecart =
-      EntityType('minecraft:chest_minecart');
+  static const EntityType chest_minecart = EntityType('minecraft:chest_minecart');
 
   /// [Chicken](https://minecraft.wiki/w/chicken)
   ///
@@ -119,8 +127,7 @@ class Entities {
   /// [Command Block Minecart](https://minecraft.wiki/w/command_block_minecart)
   ///
   /// _(minecraft:command_block_minecart)_
-  static const EntityType command_block_minecart =
-      EntityType('minecraft:command_block_minecart');
+  static const EntityType command_block_minecart = EntityType('minecraft:command_block_minecart');
 
   /// [Cow](https://minecraft.wiki/w/cow)
   ///
@@ -145,8 +152,7 @@ class Entities {
   /// [Dragon Fireball](https://minecraft.wiki/w/dragon_fireball)
   ///
   /// _(minecraft:dragon_fireball)_
-  static const EntityType dragon_fireball =
-      EntityType('minecraft:dragon_fireball');
+  static const EntityType dragon_fireball = EntityType('minecraft:dragon_fireball');
 
   /// [Drowned](https://minecraft.wiki/w/drowned)
   ///
@@ -161,8 +167,7 @@ class Entities {
   /// [Elder Guardian](https://minecraft.wiki/w/elder_guardian)
   ///
   /// _(minecraft:elder_guardian)_
-  static const EntityType elder_guardian =
-      EntityType('minecraft:elder_guardian');
+  static const EntityType elder_guardian = EntityType('minecraft:elder_guardian');
 
   /// [End Crystal](https://minecraft.wiki/w/end_crystal)
   ///
@@ -202,14 +207,12 @@ class Entities {
   /// [Experience Bottle](https://minecraft.wiki/w/experience_bottle)
   ///
   /// _(minecraft:experience_bottle)_
-  static const EntityType experience_bottle =
-      EntityType('minecraft:experience_bottle');
+  static const EntityType experience_bottle = EntityType('minecraft:experience_bottle');
 
   /// [Experience Orb](https://minecraft.wiki/w/experience_orb)
   ///
   /// _(minecraft:experience_orb)_
-  static const EntityType experience_orb =
-      EntityType('minecraft:experience_orb');
+  static const EntityType experience_orb = EntityType('minecraft:experience_orb');
 
   /// [Eye Of Ender](https://minecraft.wiki/w/eye_of_ender)
   ///
@@ -229,14 +232,12 @@ class Entities {
   /// [Firework Rocket](https://minecraft.wiki/w/firework_rocket)
   ///
   /// _(minecraft:firework_rocket)_
-  static const EntityType firework_rocket =
-      EntityType('minecraft:firework_rocket');
+  static const EntityType firework_rocket = EntityType('minecraft:firework_rocket');
 
   /// [Fishing Bobber](https://minecraft.wiki/w/fishing_bobber)
   ///
   /// _(minecraft:fishing_bobber)_
-  static const EntityType fishing_bobber =
-      EntityType('minecraft:fishing_bobber');
+  static const EntityType fishing_bobber = EntityType('minecraft:fishing_bobber');
 
   /// [Fox](https://minecraft.wiki/w/fox)
   ///
@@ -251,8 +252,7 @@ class Entities {
   /// [Furnace Minecart](https://minecraft.wiki/w/furnace_minecart)
   ///
   /// _(minecraft:furnace_minecart)_
-  static const EntityType furnace_minecart =
-      EntityType('minecraft:furnace_minecart');
+  static const EntityType furnace_minecart = EntityType('minecraft:furnace_minecart');
 
   /// [Ghast](https://minecraft.wiki/w/ghast)
   ///
@@ -267,8 +267,7 @@ class Entities {
   /// [Glow Item Frame](https://minecraft.wiki/w/glow_item_frame)
   ///
   /// _(minecraft:glow_item_frame)_
-  static const EntityType glow_item_frame =
-      EntityType('minecraft:glow_item_frame');
+  static const EntityType glow_item_frame = EntityType('minecraft:glow_item_frame');
 
   /// [Glow Squid](https://minecraft.wiki/w/glow_squid)
   ///
@@ -293,8 +292,7 @@ class Entities {
   /// [Hopper Minecart](https://minecraft.wiki/w/hopper_minecart)
   ///
   /// _(minecraft:hopper_minecart)_
-  static const EntityType hopper_minecart =
-      EntityType('minecraft:hopper_minecart');
+  static const EntityType hopper_minecart = EntityType('minecraft:hopper_minecart');
 
   /// [Horse](https://minecraft.wiki/w/horse)
   ///
@@ -344,8 +342,7 @@ class Entities {
   /// [Lightning Bolt](https://minecraft.wiki/w/lightning_bolt)
   ///
   /// _(minecraft:lightning_bolt)_
-  static const EntityType lightning_bolt =
-      EntityType('minecraft:lightning_bolt');
+  static const EntityType lightning_bolt = EntityType('minecraft:lightning_bolt');
 
   /// [Llama](https://minecraft.wiki/w/llama)
   ///
@@ -386,6 +383,11 @@ class Entities {
   ///
   /// _(minecraft:ocelot)_
   static const EntityType ocelot = EntityType('minecraft:ocelot');
+
+  /// [Ominous Item Spawner](https://minecraft.wiki/w/ominous_item_spawner)
+  ///
+  /// _(minecraft:ominous_item_spawner)_
+  static const EntityType ominous_item_spawner = EntityType('minecraft:ominous_item_spawner');
 
   /// [Painting](https://minecraft.wiki/w/painting)
   ///
@@ -475,8 +477,7 @@ class Entities {
   /// [Shulker Bullet](https://minecraft.wiki/w/shulker_bullet)
   ///
   /// _(minecraft:shulker_bullet)_
-  static const EntityType shulker_bullet =
-      EntityType('minecraft:shulker_bullet');
+  static const EntityType shulker_bullet = EntityType('minecraft:shulker_bullet');
 
   /// [Silverfish](https://minecraft.wiki/w/silverfish)
   ///
@@ -491,8 +492,7 @@ class Entities {
   /// [Skeleton Horse](https://minecraft.wiki/w/skeleton_horse)
   ///
   /// _(minecraft:skeleton_horse)_
-  static const EntityType skeleton_horse =
-      EntityType('minecraft:skeleton_horse');
+  static const EntityType skeleton_horse = EntityType('minecraft:skeleton_horse');
 
   /// [Slime](https://minecraft.wiki/w/slime)
   ///
@@ -502,8 +502,7 @@ class Entities {
   /// [Small Fireball](https://minecraft.wiki/w/small_fireball)
   ///
   /// _(minecraft:small_fireball)_
-  static const EntityType small_fireball =
-      EntityType('minecraft:small_fireball');
+  static const EntityType small_fireball = EntityType('minecraft:small_fireball');
 
   /// [Sniffer](https://minecraft.wiki/w/sniffer)
   ///
@@ -523,14 +522,12 @@ class Entities {
   /// [Spawner Minecart](https://minecraft.wiki/w/spawner_minecart)
   ///
   /// _(minecraft:spawner_minecart)_
-  static const EntityType spawner_minecart =
-      EntityType('minecraft:spawner_minecart');
+  static const EntityType spawner_minecart = EntityType('minecraft:spawner_minecart');
 
   /// [Spectral Arrow](https://minecraft.wiki/w/spectral_arrow)
   ///
   /// _(minecraft:spectral_arrow)_
-  static const EntityType spectral_arrow =
-      EntityType('minecraft:spectral_arrow');
+  static const EntityType spectral_arrow = EntityType('minecraft:spectral_arrow');
 
   /// [Spider](https://minecraft.wiki/w/spider)
   ///
@@ -610,8 +607,7 @@ class Entities {
   /// [Wandering Trader](https://minecraft.wiki/w/wandering_trader)
   ///
   /// _(minecraft:wandering_trader)_
-  static const EntityType wandering_trader =
-      EntityType('minecraft:wandering_trader');
+  static const EntityType wandering_trader = EntityType('minecraft:wandering_trader');
 
   /// [Warden](https://minecraft.wiki/w/warden)
   ///
@@ -636,8 +632,7 @@ class Entities {
   /// [Wither Skeleton](https://minecraft.wiki/w/wither_skeleton)
   ///
   /// _(minecraft:wither_skeleton)_
-  static const EntityType wither_skeleton =
-      EntityType('minecraft:wither_skeleton');
+  static const EntityType wither_skeleton = EntityType('minecraft:wither_skeleton');
 
   /// [Wither Skull](https://minecraft.wiki/w/wither_skull)
   ///
@@ -667,14 +662,12 @@ class Entities {
   /// [Zombie Villager](https://minecraft.wiki/w/zombie_villager)
   ///
   /// _(minecraft:zombie_villager)_
-  static const EntityType zombie_villager =
-      EntityType('minecraft:zombie_villager');
+  static const EntityType zombie_villager = EntityType('minecraft:zombie_villager');
 
   /// [Zombified Piglin](https://minecraft.wiki/w/zombified_piglin)
   ///
   /// _(minecraft:zombified_piglin)_
-  static const EntityType zombified_piglin =
-      EntityType('minecraft:zombified_piglin');
+  static const EntityType zombified_piglin = EntityType('minecraft:zombified_piglin');
 
   //[[[end]]]
 
@@ -684,133 +677,136 @@ class Entities {
     for b in blocks:
       cog.outl(f'{b},')
     ]]]*/
-        allay,
-        area_effect_cloud,
-        armadillo,
-        armor_stand,
-        arrow,
-        axolotl,
-        bat,
-        bee,
-        blaze,
-        block_display,
-        boat,
-        breeze,
-        camel,
-        cat,
-        cave_spider,
-        chest_boat,
-        chest_minecart,
-        chicken,
-        cod,
-        command_block_minecart,
-        cow,
-        creeper,
-        dolphin,
-        donkey,
-        dragon_fireball,
-        drowned,
-        egg,
-        elder_guardian,
-        end_crystal,
-        ender_dragon,
-        ender_pearl,
-        enderman,
-        endermite,
-        evoker,
-        evoker_fangs,
-        experience_bottle,
-        experience_orb,
-        eye_of_ender,
-        falling_block,
-        fireball,
-        firework_rocket,
-        fishing_bobber,
-        fox,
-        frog,
-        furnace_minecart,
-        ghast,
-        giant,
-        glow_item_frame,
-        glow_squid,
-        goat,
-        guardian,
-        hoglin,
-        hopper_minecart,
-        horse,
-        husk,
-        illusioner,
-        interaction,
-        iron_golem,
-        item,
-        item_display,
-        item_frame,
-        leash_knot,
-        lightning_bolt,
-        llama,
-        llama_spit,
-        magma_cube,
-        marker,
-        minecart,
-        mooshroom,
-        mule,
-        ocelot,
-        painting,
-        panda,
-        parrot,
-        phantom,
-        pig,
-        piglin,
-        piglin_brute,
-        pillager,
-        player,
-        polar_bear,
-        potion,
-        pufferfish,
-        rabbit,
-        ravager,
-        salmon,
-        sheep,
-        shulker,
-        shulker_bullet,
-        silverfish,
-        skeleton,
-        skeleton_horse,
-        slime,
-        small_fireball,
-        sniffer,
-        snow_golem,
-        snowball,
-        spawner_minecart,
-        spectral_arrow,
-        spider,
-        squid,
-        stray,
-        strider,
-        tadpole,
-        text_display,
-        tnt,
-        tnt_minecart,
-        trader_llama,
-        trident,
-        tropical_fish,
-        turtle,
-        vex,
-        villager,
-        vindicator,
-        wandering_trader,
-        warden,
-        wind_charge,
-        witch,
-        wither,
-        wither_skeleton,
-        wither_skull,
-        wolf,
-        zoglin,
-        zombie,
-        zombie_horse,
-        zombie_villager,
-        zombified_piglin,
+    allay,
+    area_effect_cloud,
+    armadillo,
+    armor_stand,
+    arrow,
+    axolotl,
+    bat,
+    bee,
+    blaze,
+    block_display,
+    boat,
+    bogged,
+    breeze,
+    breeze_wind_charge,
+    camel,
+    cat,
+    cave_spider,
+    chest_boat,
+    chest_minecart,
+    chicken,
+    cod,
+    command_block_minecart,
+    cow,
+    creeper,
+    dolphin,
+    donkey,
+    dragon_fireball,
+    drowned,
+    egg,
+    elder_guardian,
+    end_crystal,
+    ender_dragon,
+    ender_pearl,
+    enderman,
+    endermite,
+    evoker,
+    evoker_fangs,
+    experience_bottle,
+    experience_orb,
+    eye_of_ender,
+    falling_block,
+    fireball,
+    firework_rocket,
+    fishing_bobber,
+    fox,
+    frog,
+    furnace_minecart,
+    ghast,
+    giant,
+    glow_item_frame,
+    glow_squid,
+    goat,
+    guardian,
+    hoglin,
+    hopper_minecart,
+    horse,
+    husk,
+    illusioner,
+    interaction,
+    iron_golem,
+    item,
+    item_display,
+    item_frame,
+    leash_knot,
+    lightning_bolt,
+    llama,
+    llama_spit,
+    magma_cube,
+    marker,
+    minecart,
+    mooshroom,
+    mule,
+    ocelot,
+    ominous_item_spawner,
+    painting,
+    panda,
+    parrot,
+    phantom,
+    pig,
+    piglin,
+    piglin_brute,
+    pillager,
+    player,
+    polar_bear,
+    potion,
+    pufferfish,
+    rabbit,
+    ravager,
+    salmon,
+    sheep,
+    shulker,
+    shulker_bullet,
+    silverfish,
+    skeleton,
+    skeleton_horse,
+    slime,
+    small_fireball,
+    sniffer,
+    snow_golem,
+    snowball,
+    spawner_minecart,
+    spectral_arrow,
+    spider,
+    squid,
+    stray,
+    strider,
+    tadpole,
+    text_display,
+    tnt,
+    tnt_minecart,
+    trader_llama,
+    trident,
+    tropical_fish,
+    turtle,
+    vex,
+    villager,
+    vindicator,
+    wandering_trader,
+    warden,
+    wind_charge,
+    witch,
+    wither,
+    wither_skeleton,
+    wither_skull,
+    wolf,
+    zoglin,
+    zombie,
+    zombie_horse,
+    zombie_villager,
+    zombified_piglin,
         //[[[end]]]
       ];
 }

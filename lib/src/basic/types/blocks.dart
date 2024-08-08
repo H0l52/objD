@@ -6,8 +6,8 @@ class Blocks {
   import cog
   import requests
 
-  version = '1.20/releases/1.20.4'
-  snapshot = '1.20/snapshots/23w51b'
+  version = '1.21/releases/1.21.1'
+  snapshot = '1.21/releases/1.21.1'
 
   res = requests.get(f'https://raw.githubusercontent.com/PixiGeko/Minecraft-generated-data/master/{snapshot}/custom-generated/registries/block.txt')
   res_release = requests.get(f'https://raw.githubusercontent.com/PixiGeko/Minecraft-generated-data/master/{version}/custom-generated/registries/block.txt')
@@ -2165,6 +2165,11 @@ class Blocks {
   /// [Hay Block](https://minecraft.wiki/w/hay_block) \ 
   /// _minecraft:hay_block_
   static const Block hay_block = Block('minecraft:hay_block');
+
+  /// ![heavy_core](https://minecraftitemids.com/item/32/heavy_core.png) \ 
+  /// [Heavy Core](https://minecraft.wiki/w/heavy_core) \ 
+  /// _minecraft:heavy_core_
+  static const Block heavy_core = Block('minecraft:heavy_core');
 
   /// ![heavy_weighted_pressure_plate](https://minecraftitemids.com/item/32/heavy_weighted_pressure_plate.png) \ 
   /// [Heavy Weighted Pressure Plate](https://minecraft.wiki/w/heavy_weighted_pressure_plate) \ 
@@ -4776,6 +4781,11 @@ class Blocks {
   /// _minecraft:twisting_vines_plant_
   static const Block twisting_vines_plant = Block('minecraft:twisting_vines_plant');
 
+  /// ![vault](https://minecraftitemids.com/item/32/vault.png) \ 
+  /// [Vault](https://minecraft.wiki/w/vault) \ 
+  /// _minecraft:vault_
+  static const Block vault = Block('minecraft:vault');
+
   /// ![verdant_froglight](https://minecraftitemids.com/item/32/verdant_froglight.png) \ 
   /// [Verdant Froglight](https://minecraft.wiki/w/verdant_froglight) \ 
   /// _minecraft:verdant_froglight_
@@ -5752,6 +5762,7 @@ class Blocks {
     grindstone,
     hanging_roots,
     hay_block,
+    heavy_core,
     heavy_weighted_pressure_plate,
     honey_block,
     honeycomb_block,
@@ -6274,6 +6285,7 @@ class Blocks {
     turtle_egg,
     twisting_vines,
     twisting_vines_plant,
+    vault,
     verdant_froglight,
     vine,
     void_air,
