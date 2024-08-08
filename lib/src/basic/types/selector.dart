@@ -27,6 +27,7 @@ class Selector {
   Sort? sorting;
   String? playerName;
   String? predicate;
+  Map<String, dynamic>? advancements;
 
   /// Create entity selector (default selector: @e)
   Selector({
@@ -49,6 +50,7 @@ class Selector {
     this.sorting,
     this.playerName,
     this.predicate,
+    this.advancements,
   }) {
     _fix();
   }
@@ -73,6 +75,7 @@ class Selector {
     this.sorting,
     this.playerName,
     this.predicate,
+    this.advancements,
   }) : selector = 's' {
     _fix();
   }
@@ -97,6 +100,7 @@ class Selector {
     this.sorting,
     this.playerName,
     this.predicate,
+    this.advancements,
   }) : selector = 'p' {
     _fix();
   }
@@ -121,6 +125,7 @@ class Selector {
     this.sorting,
     this.playerName,
     this.predicate,
+    this.advancements,
   }) : selector = 'a' {
     _fix();
   }
@@ -145,6 +150,7 @@ class Selector {
     this.sorting,
     this.playerName,
     this.predicate,
+    this.advancements,
   }) : selector = 'r' {
     _fix();
   }
@@ -181,6 +187,7 @@ class Selector {
     verticalRotation = s.verticalRotation;
     sorting = s.sorting;
     predicate = s.predicate;
+    advancements = s.advancements;
   }
 
   /// Parse a Selector, for example:
@@ -279,6 +286,12 @@ class Selector {
               nbt!.addAll(gson.decoder.decode(p) as Map<String, dynamic>);
             }
             break;
+          case 'advancements':
+            if (advancements == null) {
+              advancements = gson.decoder.decode(p) as Map<String, dynamic>;
+            } else {
+              advancements!.addAll(gson.decoder.decode(p) as Map<String, dynamic>);
+            }
           case 'tag':
             if (tags == null) {
               tags = [_parseString(p)];

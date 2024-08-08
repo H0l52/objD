@@ -16,6 +16,12 @@ void main() {
           ).toString(),
           "@r[limit=1,scores={test=6..}]");
     });
+    test('Advancement', () {
+      expect(Entity.Self(advancements: {
+        "story/smelt_iron": true, 
+        "adventure/kill_all_mobs":{"witch":true}
+      }).toString(), "@s[advancements={story/smelt_iron=true,adventure/kill_all_mobs={witch=true}}]");
+    });
   });
   group('Entity Clone', () {
     Entity newEntity = Entity(tags: ['test']);

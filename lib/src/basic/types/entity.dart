@@ -32,6 +32,7 @@ class Entity extends GsonValue implements EntityClass {
     Range? horizontalRotation,
     Range? verticalRotation,
     String? predicate,
+    Map<String, dynamic>? advancements,
   }) : selector = 'p' {
     _setArguments(
       null,
@@ -50,6 +51,7 @@ class Entity extends GsonValue implements EntityClass {
       horizontalRotation,
       verticalRotation,
       predicate,
+      advancements,
       false,
     );
   }
@@ -74,6 +76,7 @@ class Entity extends GsonValue implements EntityClass {
     Range? horizontalRotation,
     Range? verticalRotation,
     String? predicate,
+    Map<String, dynamic>? advancements,
   }) : selector = 'a' {
     _setArguments(
       limit,
@@ -92,6 +95,7 @@ class Entity extends GsonValue implements EntityClass {
       horizontalRotation,
       verticalRotation,
       predicate,
+      advancements,
       false,
     );
   }
@@ -114,6 +118,7 @@ class Entity extends GsonValue implements EntityClass {
     Range? horizontalRotation,
     Range? verticalRotation,
     String? predicate,
+    Map<String, dynamic>? advancements,
   }) : selector = 'r' {
     _setArguments(
       limit,
@@ -132,6 +137,7 @@ class Entity extends GsonValue implements EntityClass {
       horizontalRotation,
       verticalRotation,
       predicate,
+      advancements,
       false,
     );
   }
@@ -153,6 +159,7 @@ class Entity extends GsonValue implements EntityClass {
     Range? horizontalRotation,
     Range? verticalRotation,
     String? predicate,
+    Map<String, dynamic>? advancements,
   }) : selector = 's' {
     _setArguments(
       null,
@@ -171,6 +178,7 @@ class Entity extends GsonValue implements EntityClass {
       horizontalRotation,
       verticalRotation,
       predicate,
+      advancements,
       false,
     );
   }
@@ -215,6 +223,7 @@ class Entity extends GsonValue implements EntityClass {
       horizontalRotation,
       verticalRotation,
       predicate,
+      null,
       false,
     );
   }
@@ -236,6 +245,7 @@ class Entity extends GsonValue implements EntityClass {
     Range? horizontalRotation,
     Range? verticalRotation,
     String? predicate,
+    Map<String, dynamic>? advancements,
   }) : selector = 's' {
     _setArguments(
       null,
@@ -254,6 +264,7 @@ class Entity extends GsonValue implements EntityClass {
       horizontalRotation,
       verticalRotation,
       predicate,
+      advancements,
       false,
     );
   }
@@ -277,6 +288,7 @@ class Entity extends GsonValue implements EntityClass {
       selector.horizontalRotation,
       selector.verticalRotation,
       selector.predicate,
+      selector.advancements,
       false,
     );
     if (selector.sorting != null) {
@@ -309,6 +321,7 @@ class Entity extends GsonValue implements EntityClass {
     Rotation? isRotated,
     Range? horizontalRotation,
     Range? verticalRotation,
+    Map<String, dynamic>? advancements,
     this.playerName,
   }) {
     _setArguments(
@@ -328,6 +341,7 @@ class Entity extends GsonValue implements EntityClass {
       horizontalRotation,
       verticalRotation,
       predicate,
+      advancements,
       false,
     );
   }
@@ -350,6 +364,7 @@ class Entity extends GsonValue implements EntityClass {
     Range? horizontalRotation,
     Range? verticalRotation,
     String? predicate,
+    Map<String, dynamic>? advancements,
   }) {
     _setArguments(
       limit,
@@ -368,6 +383,7 @@ class Entity extends GsonValue implements EntityClass {
       horizontalRotation,
       verticalRotation,
       predicate,
+      advancements,
       false,
     );
   }
@@ -389,6 +405,7 @@ class Entity extends GsonValue implements EntityClass {
     Range? horizontalRotation,
     Range? verticalRotation,
     String? predicate,
+    Map<String, dynamic>? advancements,
     bool? not,
   ) {
     var n = '';
@@ -463,6 +480,21 @@ class Entity extends GsonValue implements EntityClass {
       }
       arguments['scores'] = '$n{${ret.join(',')}}';
     }
+    if (advancements != null) {
+      if (not != null && not) {
+        advancements.forEach((key,value) {
+          if (value is bool) value!=value;
+          if (value is Map) {
+            value.forEach((key2, value2) {
+              if (value2 is bool) value2!=value2;
+            });
+          }
+        });
+      }
+      
+      arguments['advancements'] = gsonEncode(advancements).replaceAll(':','=').
+      replaceAll('1b', 'true').replaceAll('0b', 'false');
+    }
   }
 
   Entity sort(Sort sort) {
@@ -494,6 +526,7 @@ class Entity extends GsonValue implements EntityClass {
     Range? horizontalRotation,
     Range? verticalRotation,
     String? predicate,
+    Map<String, dynamic>? advancements,
   }) {
     _setArguments(
       limit,
@@ -512,6 +545,7 @@ class Entity extends GsonValue implements EntityClass {
       horizontalRotation,
       verticalRotation,
       predicate,
+      advancements,
       true,
     );
     return this;
@@ -557,6 +591,7 @@ class Entity extends GsonValue implements EntityClass {
     Range? horizontalRotation,
     Range? verticalRotation,
     String? predicate,
+    Map<String, dynamic>? advancements,
   }) {
     var temp = Entity.clone(this);
     temp._setArguments(
@@ -576,6 +611,7 @@ class Entity extends GsonValue implements EntityClass {
       horizontalRotation,
       verticalRotation,
       predicate,
+      advancements,
       false,
     );
     return temp;

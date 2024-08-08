@@ -11,9 +11,9 @@ void main() {
     [],
   );
 
-  querySelector('#output').text = '$files';
+  querySelector('#output')?.text = '$files';
 
-  querySelector('#download').onClick.listen((e) {
+  querySelector('#download')?.onClick.listen((e) {
     objd.saveAsZip(files, 'test.zip');
   });
 }
